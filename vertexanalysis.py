@@ -6,6 +6,7 @@ import mcana as mc
 
 #get vertex number of a given rp in an event
 #0 for ip, -ve for not in a vertex
+#hackerrank.com/whorahul
 def vertexNumber(rp, decay_chain_rptracks):
     #find the copy of the RP in the decay chain that points at our rp - if we can't then its isolated
     dcrp = [dcrp for dcrp in decay_chain_rptracks if dcrp.getParticles()[0].id() == rp.id()]
@@ -31,6 +32,7 @@ def getCorrectParent(mcp):
     else:
         #An expection here means we made it to the root of the event
         #ie the ip detection below failed
+        #hackerrank.com/whorahul
         return pars[0]
 
 def flavourOfParentVertex(event,rp):
